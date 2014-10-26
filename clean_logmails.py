@@ -28,7 +28,7 @@ def main():
         for filename, msg in cleanfolder.items():
             # If epoch timestamp of the msg is smaller than keep_time epoch timestamp
             if msg.get_date() < keep_time:
-                print("Filename:", filename, "\nSubject:", msg['subject'], "\nDate", msg['date'], "\n----------------------------------")
+                print("Filename: {}\nSubject: {}\nDate: {}\n----------------------------------".format(filename, msg['subject'], msg['date']))
                 cleanfolder.remove(filename)
 
     maildir.close()
